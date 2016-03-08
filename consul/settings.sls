@@ -6,10 +6,10 @@
 {%- set home_dir = salt['pillar.get']('consul:home', '/opt/consul') %}
 {%- set domain = salt['pillar.get']('consul:domain', 'consul.') %}
 
-{%- set source_url = 'https://dl.bintray.com/mitchellh/consul/' ~ version ~ '_linux_amd64.zip' %}
+{%- set source_url = 'https://releases.hashicorp.com/consul/' ~ version ~ '/consul_' ~ version ~ '_linux_amd64.zip' %}
 {%- set source_hash =  salt['pillar.get']('consul:source_hash', 'md5=37000419d608fd34f0f2d97806cf7399') %}
 
-{%- set ui_source_url = 'https://dl.bintray.com/mitchellh/consul/' ~ version ~ '_web_ui.zip' %}
+{%- set ui_source_url = 'https://releases.hashicorp.com/consul/' ~ version ~ '/consul_' ~ version ~ '_web_ui.zip' %}
 {%- set ui_source_hash = salt['pillar.get']('consul:ui_source_hash', 'md5=eb98ba602bc7e177333eb2e520881f4f') %}
 
 {%- set targeting_method = salt['pillar.get']('consul:targeting_method', 'glob') %}
